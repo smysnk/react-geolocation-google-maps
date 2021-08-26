@@ -5,6 +5,8 @@ import useLocations from './hooks/useLocations';
 import Marker from './Marker';
 import Stats from './Stats';
 
+const googleMapsApiKey = '';
+
 const getMapOptions = (maps) => {
   return {
     streetViewControl: false,
@@ -148,7 +150,7 @@ const handleApiLoaded = (map, maps) => {
       <Stats text={`Accuracy: ${accuracy}`} />
       <GoogleMapReact
         yesIWantToUseGoogleMapApiInternals={true}
-        bootstrapURLKeys={{ key: 'AIzaSyCqQwEmEBphhmoUCb60lGCE0EX-YnRWB0k' }}
+        bootstrapURLKeys={{ key: googleMapsApiKey }}
         defaultCenter={location.center}
         defaultZoom={location.zoom}
         center={[latitude, longitude]}
